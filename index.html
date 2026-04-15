@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Gestor de Tareas</h1>
+
+    <!-- 🔹 Pestañas -->
+    <div class="tabs">
+        <div class="tab active" data-tab="upload">Subir Tarea</div>
+        <div class="tab" data-tab="pending">Tareas Pendientes</div>
+        <div class="tab" data-tab="completed">Tareas Completadas</div>
+    </div>
+
+    <!-- 🔹 Sección: Subir tarea -->
+    <div id="upload" class="section active">
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Nombre de la tarea" required>
+            <textarea id="taskDesc" placeholder="Descripción" rows="3" required></textarea>
+
+            <!-- ✅ IMPORTANTE: id agregado -->
+            <button id="addTaskBtn">Agregar Tarea</button>
+        </div>
+
+        <!-- 🔹 Animación de carga -->
+        <div class="loading" id="loading">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- 🔹 Sección: Pendientes -->
+    <div id="pending" class="section">
+        <div class="task-list" id="pendingList"></div>
+    </div>
+
+    <!-- 🔹 Sección: Completadas -->
+    <div id="completed" class="section">
+        <div class="task-list" id="completedList"></div>
+    </div>
+</div>
+
+<!-- 🔹 Tu script JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
